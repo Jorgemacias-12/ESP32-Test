@@ -1,0 +1,199 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #5863F8;
+    color: white;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 4rem);
+    gap: 1rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-flow: column;
+    width: 20vw;
+    height: 30vh;
+    border: .1rem solid #ccc;
+    background-color: #f7f7f8;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    height: auto;
+    gap: .5rem;
+}
+
+.input {
+    outline: none;
+    border: .1rem solid #ccc;
+    padding-left: 0.5rem;
+    height: 2rem;
+    box-shadow: none;
+}
+
+.input:focus,
+.input:hover {
+    border-color: rgb(53, 144, 243);
+    box-shadow: 0px 0px 0px .2rem rgba(53 144 243 / 25%);
+}
+
+.button {
+    border: none;
+    height: 2rem;
+    background-color: rgb(88, 99, 248);
+    color: white;
+    cursor: pointer;
+    border-radius: .2rem;
+}
+
+.button:active,
+.button:focus {
+    box-shadow: 0px 0px 0rem .2rem rgba(88 99 248 / 25%);
+    outline: none;
+}
+
+
+.container {
+    grid-template-columns: auto auto;
+    place-content: center;
+    gap: 1rem;
+    width: calc(100vw - 1rem);
+    padding: 1rem;
+}
+
+.container[data-visible="false"] {
+    display: none;
+}
+
+.container[data-visible="true"] {
+    display: grid;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    border: .1rem solid #ccc;
+    width: 20rem;
+    height: auto;
+    background-color: #f7f7f8;
+    gap: .5rem;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#temp-icon {
+    color: #fa2d22;
+}
+
+#hum-icon {
+    color: #5fbff9;
+}
+
+.card-text {
+    height: 2rem;
+}

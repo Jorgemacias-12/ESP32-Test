@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ESP32 Sensor - Dashboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1 class="title">
+            ESP32 Sensor Monitor
+        </h1>
+
+    </header>
+
+    <main class="page-content">
+
+        <form action="" onsubmit="" class="form" id="login" method="POST">
+
+            <h2 class="title">
+                Autenticación
+            </h2>
+
+            <section class="form-group">
+
+                <label for="email" class="label">Correo:</label>
+                <input name="email" id="email" type="email" class="input">
+
+            </section>
+
+            <section class="form-group">
+
+                <label for="pass" class="label">Contraseña:</label>
+                <input name="pass" id="pass" type="password" class="input">
+
+            </section>
+
+            <button type="button" class="button" id="btn-login">
+                Iniciar sesión
+            </button>
+
+        </form>
+
+        <section class="container " id="statistics" data-visible="true">
+
+            <article class="card">
+
+                <h3 class="card-title">
+                    <i class="fas fa-temperature-empty icon" id="temp-icon"></i>
+                    Temperatura
+                </h3>
+
+                <p class="card-text" id="temp-data">
+                    Valor aquí °C
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3 class="card-title">
+                    <i class="fas fa-tint icon" id="hum-icon"></i> 
+                    Humedad
+                </h3>
+            
+                <p class="card-text" id="hum-data">
+                    Valor aquí %
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
