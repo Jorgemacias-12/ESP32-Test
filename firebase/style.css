@@ -179,6 +179,7 @@ body {
     height: auto;
     background-color: #f7f7f8;
     gap: .5rem;
+    border-radius: .2rem;
 }
 
 .card-title {
@@ -196,4 +197,16 @@ body {
 
 .card-text {
     height: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .form {
+        width: auto;
+        padding: 1rem;
+    }
+
+    .container {
+        grid-template-columns: auto;
+    }
+
 }
